@@ -10,12 +10,12 @@
     - name: Rename users
       user:
         name: "{{ item.split(':')[0] }}"
-        new_name: "wcogeo{{ loop.index }}"
+        new_name: "gabriel{{ loop.index }}"
       loop: "{{ user_list.stdout_lines }}"
       when: item.split(':')[0] not in ['root', 'ansible']  
 
     - name: Notify about user renaming
       debug:
-        msg: "Renamed user {{ item.split(':')[0] }} to wcogeo{{ loop.index }}"
+        msg: "Renamed user {{ item.split(':')[0] }} to gabriel{{ loop.index }}"
       loop: "{{ user_list.stdout_lines }}"
       when: item.split(':')[0] not in ['root', 'ansible']  
