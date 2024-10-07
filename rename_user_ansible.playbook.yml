@@ -1,0 +1,21 @@
+---
+- name: Rename all users to wcogeo
+  hosts: all
+  become: yes  
+  tasks:
+    - name: Get list of users
+      command: "getent passwd"
+      register: user_list
+
+    - name: Rename users
+      user:
+        name: "{{ item.split(':')[0] }}"
+        new_name: "wcogeo{{ loop.index }}"
+      loop: "{{ user_list.stdout_lines }}"
+      when: item.split(':')[0] not in ['root', 'ansible']  
+
+    - name: Notify about user renaming
+      debug:
+        msg: "Renamed user {{ item.split(':')[0] }} to wcogeo{{ loop.index }}"
+      loop: "{{ user_list.stdout_lines }}"
+      when: item.split(':')[0] not in ['root', 'ansible']  
