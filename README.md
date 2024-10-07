@@ -1,2 +1,2 @@
-# My scripts for automation
-A rapository for my automation scripts 
+# My most used scripts
+A repository with the scripts i use most every day
