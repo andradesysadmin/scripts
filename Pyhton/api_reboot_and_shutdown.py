@@ -5,7 +5,6 @@ app = Flask(__name__)
 
 @app.route('/shutdown', methods=['POST'])
 def shutdown():
-    # Você pode adicionar uma verificação de autenticação aqui para segurança
     try:
         # Comando para desligar a máquina Windows
         subprocess.run(['shutdown', '/s', '/t', '0'], check=True)
@@ -15,7 +14,6 @@ def shutdown():
 
 @app.route('/restart', methods=['POST'])
 def restart():
-    # Você pode adicionar uma verificação de autenticação aqui para segurança
     try:
         # Comando para reiniciar a máquina Windows
         subprocess.run(['shutdown', '/r', '/t', '0'], check=True)
