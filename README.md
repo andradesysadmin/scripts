@@ -1,2 +1,2 @@
-# My most used scripts
-A repository with the scripts i use most every day
+# Um repositório com meus scripts mais ultilizados
+ Como um bom sysadmin preguiçoso, dedico boa parte do meu tempo livre buscando automatizar o maximo de tarefas possiveis, porém, devido ao grau de especificidade da maioria dos scripts usados no meu dia dia optei por não criar um respositório separado para cada um deles, até porque a maioria destes são bem simples, mas, apesar de simples, facilitam muito minha vida a resolvem muitas tarefas chatas de maneira eficaz. Fora facilitar a organização dos mesmos decidi compartilhar meus 
