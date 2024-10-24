@@ -1,6 +1,15 @@
 from flask import Flask, request, jsonify
 import subprocess
 
+
+'''
+
+API que ultilizo para desligar remotamente computadores windows
+
+
+'''
+
+
 app = Flask(__name__)
 
 @app.route('/shutdown', methods=['POST'])
