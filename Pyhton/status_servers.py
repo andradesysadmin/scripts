@@ -5,6 +5,14 @@ import time
 import psutil
 import socket
 
+'''
+
+API ultilizada para monitorar remotamente o status de servidores, ela basicamente usa a biblioteca scapy 
+para pingar os servidores em loop e retornar seu status em um html simples a partir de informações obtidas pelo protocolo ICMP
+
+'''
+
+
 app = Flask(__name__)
 
 server_ips = [
