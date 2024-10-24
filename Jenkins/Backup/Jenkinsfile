@@ -3,7 +3,13 @@ pipeline {
     stages {
         stage("Teste") {
             steps {
-                sh 'echo teste'
+                sh '''
+                    ls
+                    cd /var
+                    ls
+                    cd ~
+                    ls
+                '''
             }
         }
     }
